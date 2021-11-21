@@ -12,7 +12,11 @@ function CreateTweet() {
         style={{ width: 200, height: 100 }}
       />
       <br />
-      <Button variant='contained' endIcon={<SendIcon />}>
+      <Button
+        style={{ marginTop: 8 }}
+        variant='contained'
+        endIcon={<SendIcon />}
+      >
         Send
       </Button>
     </form>

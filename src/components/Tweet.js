@@ -6,11 +6,12 @@ const Tweet = ({ name, message }) => {
     <div>
       <h2>{name}</h2>
       <h3>{message}</h3>
+
+      <Button style={{ marginRight: 16 }} variant='contained' color='error'>
+        Delete
+      </Button>
       <Button variant='contained' color='success'>
         Like
-      </Button>
-      <Button style={{ marginLeft: 16 }} variant='contained' color='error'>
-        Delete
       </Button>
     </div>
   );
