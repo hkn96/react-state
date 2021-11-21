@@ -5,6 +5,9 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
+  //STATE
+  const [textInput, setTextInput] = useState('')
+  const [tweets, setTweets] = useState([])
   const [name, setName] = useState('hakan')
   const message = 'Erste Nachricht'
 
@@ -25,8 +28,13 @@ function App() {
         Tweet
       </Typography>
       <br />
-      <CreateTweet />
-      <TweetList name={name} message={message} />
+      <CreateTweet
+        textInput={textInput}
+        setTextInput={setTextInput}
+        tweets={tweets}
+        setTweets={setTweets}
+      />
+      <TweetList name={name} tweets={tweets} />
     </div>
   )
 }
