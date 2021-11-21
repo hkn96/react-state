@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import Tweet from './components/Tweet';
+import Typography from '@mui/material/Typography';
+import CreateTweet from './components/CreateTweet';
 import './App.css';
 
 function App() {
+  const name = 'hakan';
+  const message = 'i want to sleep';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Typography variant='h2' component='h2'>
+        Tweet
+      </Typography>
+      <CreateTweet />
+      <Tweet name={name} message={message} />
     </div>
   );
 }
