@@ -1,11 +1,12 @@
-import TweetList from './components/TweetList';
-import Typography from '@mui/material/Typography';
-import CreateTweet from './components/CreateTweet';
-import './App.css';
+import TweetList from './components/TweetList'
+import Typography from '@mui/material/Typography'
+import CreateTweet from './components/CreateTweet'
+import './App.css'
+import { useState } from 'react'
 
 function App() {
-  const name = 'hakan';
-  const message = 'i want to sleep';
+  const [name, setName] = useState('hakan')
+  const message = 'Erste Nachricht'
 
   return (
     <div className='App'>
@@ -20,15 +21,14 @@ function App() {
           padding: '0 30px',
         }}
         variant='h2'
-        component='h2'
-      >
+        component='h2'>
         Tweet
       </Typography>
       <br />
       <CreateTweet />
       <TweetList name={name} message={message} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

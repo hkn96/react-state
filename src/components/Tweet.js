@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React from 'react'
+import Button from '@mui/material/Button'
 
 const Tweet = ({ name, message }) => {
   return (
@@ -14,7 +14,7 @@ const Tweet = ({ name, message }) => {
         Like
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default Tweet;
+export default Tweet
