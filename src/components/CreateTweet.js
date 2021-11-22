@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button'
 import TextareaAutosize from '@mui/material/TextareaAutosize'
 import SendIcon from '@mui/icons-material/Send'
+import { v4 as uuidv4 } from 'uuid'
 
 function CreateTweet({ textInput, setTextInput, tweets, setTweets }) {
   const userInputHandler = e => {
@@ -9,7 +10,7 @@ function CreateTweet({ textInput, setTextInput, tweets, setTweets }) {
 
   const submitTweetHandler = e => {
     e.preventDefault()
-    setTweets([...tweets, textInput])
+    setTweets([...tweets, { message: textInput, id: uuidv4() }])
     setTextInput('')
   }
 

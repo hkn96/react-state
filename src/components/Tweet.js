@@ -3,12 +3,12 @@ import Button from '@mui/material/Button'
 
 const Tweet = ({ name, tweet, tweets, setTweets }) => {
   const deleteTweet = () => {
-    setTweets(tweets.filter(t => t !== tweet))
+    setTweets(tweets.filter(state => state.id === tweet.id))
   }
   return (
     <div>
       <h2>{name}</h2>
-      <h3>{tweet}</h3>
+      <h3>{tweet.message}</h3>
 
       <Button
         onClick={deleteTweet}
