@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Button from '@mui/material/Button'
 import TextareaAutosize from '@mui/material/TextareaAutosize'
 import SendIcon from '@mui/icons-material/Send'
@@ -16,7 +15,6 @@ function CreateTweet({ textInput, setTextInput, tweets, setTweets }) {
 
   return (
     <div>
-      <h3>{tweets}</h3>
       <form>
         <TextareaAutosize
           onChange={userInputHandler}

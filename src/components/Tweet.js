@@ -1,13 +1,20 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 
-const Tweet = ({ name, tweets }) => {
+const Tweet = ({ name, tweet, tweets, setTweets }) => {
+  const deleteTweet = () => {
+    setTweets(tweets.filter(t => t !== tweet))
+  }
   return (
     <div>
       <h2>{name}</h2>
-      <h3>{tweets}</h3>
+      <h3>{tweet}</h3>
 
-      <Button style={{ marginRight: 16 }} variant='contained' color='error'>
+      <Button
+        onClick={deleteTweet}
+        style={{ marginRight: 16 }}
+        variant='contained'
+        color='error'>
         Delete
       </Button>
       <Button variant='contained' color='success'>
